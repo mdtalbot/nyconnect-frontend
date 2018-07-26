@@ -27,32 +27,15 @@
   to { transform: rotate(360deg); }
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly
-}
-.detail-view {
-  background-image: url('./assets/faded-american-flag-background-10.jpg');
-  text-align: left;
-  width: 70vw;
-  float: left;
-  height: 100vh;
-  padding: 1em;
-  margin: 1em
+.rep-detail-view {
+  background-image: url('../src/assets/faded-american-flag-background-10.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.reps-list {
-  width: 30vw;
+.rep-list-view {
   text-align: left;
-  float: left;
-  height: 100vh;
+  height: 93.5vh;
   overflow: scroll
 }
 
-.rep-photo {
-    height: auto;
-    width: auto;
-    max-width: 300px;
-    max-height: 300px;
-}

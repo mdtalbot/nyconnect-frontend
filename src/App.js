@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Container from './components/Container'
+import ViewsContainer from './components/ViewsContainer'
 
 // const { google } = require('googleapis');
 
@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container />
+        <ViewsContainer />
       </div>
 
     );
