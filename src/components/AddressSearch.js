@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, Form } from "semantic-ui-react";
+import LoginForm from './LoginForm'
 
 
 export default class AddressSearch extends React.Component {
@@ -23,6 +24,7 @@ export default class AddressSearch extends React.Component {
         <Form.Group>
           <Form.Input width={8} placeholder="Enter your address to see a list of your representatives." value={this.props.userAddress} onChange={this.props.handleSearchChange} />
           <Form.Button content="Submit" />
+          {/* <LoginForm /> */}
         </Form.Group>
       </Form>
     );

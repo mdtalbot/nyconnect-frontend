@@ -10,9 +10,14 @@ export default class ViewsContainer extends React.Component {
 
     this.state = {
       elections: [],
+      userName: '',
+      userLogin: '',
+      userPassword: '',
       userAddress: '',
       representatives: [],
-      selectedReps: []
+      selectedReps: [],
+      repEmail: '',
+      emailBody: ''
     }
   }
 

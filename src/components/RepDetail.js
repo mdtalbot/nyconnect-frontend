@@ -1,13 +1,10 @@
 import React from 'react';
 import RepLinks from './RepLinks'
-import {Container, Item, Image} from 'semantic-ui-react'
+import MailForm from './MailForm'
+import {Container, Item, Image, Modal, Form} from 'semantic-ui-react'
 
 
 export default function RepDetail(props) {
-
-  function getAltImg() {
-    document.getElementsByClassName("rep-photo").src = '../../public/assets/unavailable.jpg'
-  }
 
   console.log(props)
       if (props.selectedReps.length === 0) {
@@ -35,7 +32,8 @@ export default function RepDetail(props) {
                     <br />
                     <a href={props.selectedReps.urls}>Website</a>
                     <br />
-                    </Item.Description>
+                </Item.Description>
+                {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} /> : 'E-mail unavailable.'}
                     <Item.Extra>
                     {props.selectedReps.channels ? props.selectedReps.channels.map((channel, index) => <RepLinks key={index} type={channel.type} id={channel.id} />) : "No social media links available."}
                   </Item.Extra>

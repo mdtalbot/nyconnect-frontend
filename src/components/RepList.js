@@ -1,5 +1,6 @@
 import React from 'react';
 import RepListItem from './RepListItem'
+import {List} from 'semantic-ui-react'
 
 export default function RepList(props) {
   console.log(props)
@@ -9,10 +10,10 @@ export default function RepList(props) {
     )
   } else {
     return (
-      <ul className="reps-list">
+      <List selection verticalAlign='middle'>
         {props.representatives.offices.map((rep, index) => <RepListItem key={index} name={rep.name} value={rep.officialIndices} handleRepClick={props.handleRepClick}/>
         )}
-      </ul>
+      </List>
     )
   }
 }
