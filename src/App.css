@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url('https://staticshare.america.gov/uploads/2017/07/fnd_statelogo.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%
 }
 
 .App-logo {
@@ -39,3 +44,8 @@
   overflow: scroll
 }
 
+.welcome-content {
+  padding: 3em;
+  margin: 10em;
+  color: blueviolet
+}
