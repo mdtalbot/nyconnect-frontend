@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import Adapter from './Adapter';
-import AddressSearch from './AddressSearch';
+import LogoutButton from './LogoutButton'
 
 const propTypes = {};
 
@@ -12,16 +12,17 @@ export default function NavBar(props) {
     <header className="nav">
       <NavLink activeClassName="selected" exact to="/">Home</NavLink>  |
       {Adapter.isLoggedIn() ?
-        <button onClick={() => {
-          Adapter.logout();
-          props.history.push("/login");
-        }}>Logout</button>
+        <Fragment>
+          <LogoutButton />
+        </Fragment>
         :
         <Fragment>
             <NavLink activeClassName="selected" exact to="/register">Registration</NavLink>  |
             <NavLink activeClassName="selected" exact to="/login">Login</NavLink>
         </Fragment>
       }
+      <br />
+      <br />
     </header>
   );
 }

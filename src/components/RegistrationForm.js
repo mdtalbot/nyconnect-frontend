@@ -6,10 +6,8 @@ export default class RegistrationForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      first_name: '',
-      last_name: '',
-      email: '',
       password: '',
+      email: ''
     };
   }
 
@@ -42,62 +40,41 @@ export default class RegistrationForm extends React.Component {
       <div className="registration">
         <Grid centered>
           <Form onSubmit={this.handleSubmit}>
-          <Form.Group inline>
-          <Form.Field>
-          <label htmlFor="first_name">First name</label>
-          <input
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            onChange={this.handleChange}
-            value={this.state.first_name}
-            />
-          </Form.Field>
-          <Form.Field>
-          <label htmlFor="last_name">Last name</label>
-          <input
-            type="text"
-            name="last_name"
-            placeholder="last_name"
-            onChange={this.handleChange}
-            value={this.state.last_name}
-            />
-              </Form.Field>
-              </Form.Group>
-          <Form.Field>
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            onChange={this.handleChange}
-            value={this.state.username}
-            />
-          </Form.Field>
-          <Form.Field>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={this.handleChange}
-            value={this.state.password}
-            />
-          </Form.Field>
-          <Form.Field>
-          <label htmlFor="email">E-mail address</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail address"
-            onChange={this.handleChange}
-            value={this.state.email}
-            />
+            <Form.Field>
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                onChange={this.handleChange}
+                value={this.state.username}
+              />
             </Form.Field>
-          <Button type="submit" color='blue' value="register" >Register</Button>
+            <Form.Field>
+              <label htmlFor="email">E-mail Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail Address"
+                onChange={this.handleChange}
+                value={this.state.email}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                onChange={this.handleChange}
+                value={this.state.password}
+              />
+            </Form.Field>
+            <Button type="submit" color='blue' value="Register" >Register</Button>
           </Form>
         </Grid>
       </div>
     )
   }
 }
+

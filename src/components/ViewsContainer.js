@@ -59,6 +59,23 @@ export default class ViewsContainer extends React.Component {
     })
   }
 
+  handleEmailInput = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+
+  handleEmailSubmit = (event) => {
+    event.preventDefault()
+    fetch(`http://localhost:4000`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify()
+    })
+  }
+
   render() {
     console.log("SELECTED REPS", this.state.selectedReps);
 

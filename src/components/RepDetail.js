@@ -17,7 +17,6 @@ export default function RepDetail(props) {
 
               <Item.Content verticalAlign="middle" float="left">
                   <Item.Header>{props.selectedReps.name}</Item.Header>
-
                 <Item.Meta>
                     {props.selectedReps.party}
                 </Item.Meta>
@@ -31,7 +30,6 @@ export default function RepDetail(props) {
                     {props.selectedReps.phones}
                     <br />
                     <a href={props.selectedReps.urls}>Website</a>
-                    <br />
                 </Item.Description>
                 {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} /> : 'E-mail unavailable.'}
                     <Item.Extra>

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Form, Checkbox, Button, Grid } from 'semantic-ui-react'
+import { Form, Checkbox, Button, Grid } from 'semantic-ui-react'
+import Adapter from './Adapter'
 
 
 export default class LoginForm extends React.Component {
@@ -20,44 +21,37 @@ export default class LoginForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:4000/sessions/`, {
-      method: 'POST',
-      headers: {
-        "Content-Type": 'application/json'
-      },
-      body: JSON.stringify(this.state)
-    })
+    Adapter.login(this.state.username, this.state.password)
       .then(res => res.json())
       .then(json => {
         localStorage.setItem('token', json.token);
         this.props.history.push("/");
-      })
-    // .then(() => {
-    //   this.setState({ ...this.state });
-    // })
+      });
   }
 
   render() {
     return (
+      <div className="login-form">
       <Grid centered>
-        <Form verticalAlign='middle' onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
         <Form.Field>
           <label>Username</label>
-          <input placeholder='Username' width={8} onChange={this.handleChange} value={this.state.username}/>
+          <input placeholder='Username' name="username" type="text" width={8} onChange={this.handleChange} value={this.state.username}/>
         </Form.Field>
         <Form.Field>
           <label>Password</label>
-          <input placeholder='Password' width={8} onChange={this.handleChange} value={this.state.password}/>
+          <input placeholder='Password' name="password" type="text" width={8} onChange={this.handleChange} value={this.state.password}/>
         </Form.Field>
         <Form.Field>
           <Checkbox label='I agree to the Terms and Conditions' />
         </Form.Field>
         <div>
-          <Button type='submit' color='blue' floated='left' value='login'>Log In</Button>
+          <Button type='submit' color='blue' floated='left' value='Login'>Log In</Button>
           {/* <Button floated='right' color='grey'>Create account</Button> */}
         </div>
         </Form>
-      </Grid>
+        </Grid>
+      </div>
     );
   }
 }

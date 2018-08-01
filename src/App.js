@@ -7,7 +7,7 @@ import Welcome from './components/Welcome'
 import LoginForm from './components/LoginForm';
 import ViewsContainer from './components/ViewsContainer'
 import NavBar from './components/NavBar'
-import { Button } from 'semantic-ui-react'
+import withAuth from './components/withAuth';
 
 
 // const { google } = require('googleapis');
@@ -23,20 +23,17 @@ import { Button } from 'semantic-ui-react'
 class App extends Component {
 
   render() {
+    const AuthedRegistrationForm = withAuth(RegistrationForm, "/");
+    const AuthedLoginForm = withAuth(LoginForm, "/my-snacks");
     return (
       <div className="App">
         <NavBar />
-        <br />
+
+
         <Route exact path="/" component={Welcome} />
-        {Adapter.isLoggedIn() ?
-          <Redirect to="/" />
-          :
-          <Switch>
-            <Route exact path="/register" component={(props) => <RegistrationForm {...props} />} />
-            <Route exact path="/login" component={(props) => <LoginForm {...props} />} />
-            <Route exact path="/view" component={ViewsContainer} />
-          </Switch>
-        }
+        <Route exact path="/register" component={(props) => <AuthedRegistrationForm {...props} />} />
+        <Route exact path="/login" component={(props) => <AuthedLoginForm {...props} />} />
+        <Route exact path="/view" component={ViewsContainer} />
       </div>
 
     );

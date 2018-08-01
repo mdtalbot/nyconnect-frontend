@@ -40,7 +40,7 @@
 
 .rep-list-view {
   text-align: left;
-  height: 93.5vh;
+  height: 95vh;
   overflow: scroll
 }
 
@@ -48,4 +48,22 @@
   padding: 3em;
   margin: 10em;
   color: blueviolet
+}
+
+.registration {
+  padding: 1em;
+  margin: 10em
+}
+
+.login-form {
+  padding: 1em;
+  margin: 10em
+}
+
+.mail-form {
+  padding: 2em;
+}
+
+.mailer-header {
+  padding: 2em
 }
