@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Form, Button } from 'semantic-ui-react'
+import { Grid, Form, Button, Checkbox } from 'semantic-ui-react'
 
 export default class RegistrationForm extends React.Component {
   constructor(props) {
@@ -69,6 +69,9 @@ export default class RegistrationForm extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.password}
               />
+            </Form.Field>
+            <Form.Field>
+              <Checkbox label='I agree to the Terms and Conditions' />
             </Form.Field>
             <Button type="submit" color='blue' value="Register" >Register</Button>
           </Form>

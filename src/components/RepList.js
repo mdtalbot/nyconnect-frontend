@@ -6,7 +6,7 @@ export default function RepList(props) {
   console.log(props)
   if (props.representatives.length == 0) {
     return (
-      <p>Waiting...</p>
+<noscript>Placeholder</noscript>
     )
   } else {
     return (

@@ -8,6 +8,7 @@ import LoginForm from './components/LoginForm';
 import ViewsContainer from './components/ViewsContainer'
 import NavBar from './components/NavBar'
 import withAuth from './components/withAuth';
+import ElectionPage from './components/ElectionPage'
 
 
 // const { google } = require('googleapis');
@@ -34,6 +35,7 @@ class App extends Component {
         <Route exact path="/register" component={(props) => <AuthedRegistrationForm {...props} />} />
         <Route exact path="/login" component={(props) => <AuthedLoginForm {...props} />} />
         <Route exact path="/view" component={ViewsContainer} />
+        <Route exact path="/elections" component={ElectionPage} />
       </div>
 
     );

@@ -20,12 +20,14 @@ export default class AddressSearch extends React.Component {
       //     </div>
       //   </div>
       // </form>
+      <div className='search-bar'>
       <Form onSubmit={this.props.handleSearchSubmit}>
         <Form.Group>
-          <Form.Input width={8} placeholder="Enter your address to see a list of your representatives." value={this.props.userAddress} onChange={this.props.handleSearchChange} />
+          <Form.Input width={12} placeholder="Enter your address to see a list of your representatives." value={this.props.userAddress} onChange={this.props.handleSearchChange} />
           <Form.Button content="Submit" />
         </Form.Group>
-      </Form>
+        </Form>
+      </div>
     );
   }
 }

@@ -40,10 +40,7 @@ export default class LoginForm extends React.Component {
         </Form.Field>
         <Form.Field>
           <label>Password</label>
-          <input placeholder='Password' name="password" type="text" width={8} onChange={this.handleChange} value={this.state.password}/>
-        </Form.Field>
-        <Form.Field>
-          <Checkbox label='I agree to the Terms and Conditions' />
+          <input placeholder='Password' name="password" type="password" width={8} onChange={this.handleChange} value={this.state.password}/>
         </Form.Field>
         <div>
           <Button type='submit' color='blue' floated='left' value='Login'>Log In</Button>

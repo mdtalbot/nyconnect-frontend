@@ -1,10 +1,14 @@
 .App {
   text-align: center;
-  background-image: url('https://staticshare.america.gov/uploads/2017/07/fnd_statelogo.png');
   height: 100vh;
+  width: 100vw;
+}
+
+#wrapper {
+  background-image: url('../src/assets/faded-american-flag-background-10.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 45%
+  background-size: cover
 }
 
 .App-logo {
@@ -32,22 +36,24 @@
   to { transform: rotate(360deg); }
 }
 
-.rep-detail-view {
-  background-image: url('../src/assets/faded-american-flag-background-10.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.rep-list-view {
+  position: fixed;
+  text-align: left;
+  height: 565px;
+  overflow: auto;
+  width: 100%;
+  padding: 1em
 }
 
-.rep-list-view {
+.rep-detail-view {
   text-align: left;
-  height: 95vh;
-  overflow: scroll
+  overflow: auto;
+  width: 100%;
 }
 
 .welcome-content {
-  padding: 3em;
-  margin: 10em;
-  color: blueviolet
+  padding: 2em;
+  margin: 8em;
 }
 
 .registration {
@@ -66,4 +72,16 @@
 
 .mailer-header {
   padding: 2em
+}
+
+.nav {
+  padding: 1em;
+}
+
+.search-bar {
+    margin-left: 14em;
+}
+
+.views-container {
+  height: 83.5vh
 }

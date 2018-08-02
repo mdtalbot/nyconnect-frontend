@@ -11,9 +11,10 @@ export default function RepDetail(props) {
         return <h2>Click a representative to see their information!</h2>
     } else {
         return (
+          <div className='rep-detail-view'>
             <Item.Group relaxed>
               <Item>
-              <Item.Image height="auto" width="auto" max-height="300" max-width="300" src={props.selectedReps.photoUrl ? props.selectedReps.photoUrl : require('../assets/unavailable.jpg')} />
+              <Item.Image height="auto" width="auto" max-height="250" max-width="250" src={props.selectedReps.photoUrl ? props.selectedReps.photoUrl : require('../assets/unavailable.jpg')} />
 
               <Item.Content verticalAlign="middle" float="left">
                   <Item.Header>{props.selectedReps.name}</Item.Header>
@@ -31,13 +32,14 @@ export default function RepDetail(props) {
                     <br />
                     <a href={props.selectedReps.urls}>Website</a>
                 </Item.Description>
-                {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} handleEmailInput={props.handleEmailInput} handleEmailSubmit={props.handleEmailSubmit} emailBody={props.emailBody} /> : 'E-mail unavailable.'}
+                  {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} handleEmailInput={props.handleEmailInput} handleEmailSubmit={props.handleEmailSubmit} emailBody={props.emailBody} /> : 'E-mail unavailable.'}
                     <Item.Extra>
                     {props.selectedReps.channels ? props.selectedReps.channels.map((channel, index) => <RepLinks key={index} type={channel.type} id={channel.id} />) : "No social media links available."}
                   </Item.Extra>
                 </Item.Content>
               </Item>
             </Item.Group>
+          </div>
         );
      }
 }

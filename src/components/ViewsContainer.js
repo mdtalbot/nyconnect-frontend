@@ -17,7 +17,8 @@ export default class ViewsContainer extends React.Component {
       representatives: [],
       selectedReps: [],
       repEmail: '',
-      emailBody: ''
+      emailBody: '',
+      formStatus: ''
     }
   }
 
@@ -53,6 +54,11 @@ export default class ViewsContainer extends React.Component {
       .then(res => this.setState({ representatives: res }))
   }
 
+  handleElectionSubmit = (event) => {
+    event.preventdefault()
+    fetch('https://www.googleapis.com/civicinfo/v2/elections')
+  }
+
   mapSelectedReps = () => {
     return this.state.selectedReps.map((s) => {
       return <RepDetail selectedReps={s} handleEmailInput={this.handleEmailInput} handleEmailSubmit={this.handleEmailSubmit}/>
@@ -67,25 +73,28 @@ export default class ViewsContainer extends React.Component {
 
   handleEmailSubmit = (event) => {
     event.preventDefault()
+
     fetch(`http://localhost:4000/rep_mail`, {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json'
       },
       body: JSON.stringify({
-        address: this.state.repEmail,
-        message: this.state.emailBody
+        // address: this.state.repEmail,
+        // message: this.state.emailBody
+        address: event.target[0].value,
+        message: event.target[1].value
       }
       )
     })
-    .then(res => res.json())
+      .then(res => res.json())
   }
 
   render() {
     console.log("SELECTED REPS", this.state.selectedReps);
 
     return (
-      <div>
+      <div className="views-container">
         <Header size='small'><AddressSearch userAddress={this.state.userAddress} handleSearchChange={this.handleSearchChange} handleSearchSubmit={this.handleSearchSubmit} emailBody={this.state.emailBody} />
         </Header>
 
@@ -95,7 +104,7 @@ export default class ViewsContainer extends React.Component {
                 <RepList representatives={this.state.representatives} handleRepClick={this.handleRepClick} />
                 </Grid.Column>
               {/* <div className=""> */}
-          <Grid.Column width={12}>
+          <Grid.Column width={10}>
                 {this.mapSelectedReps()}
                 </Grid.Column>
         </Grid>
