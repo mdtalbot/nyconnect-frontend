@@ -7,7 +7,7 @@ import {Container, Item, Image, Modal, Form} from 'semantic-ui-react'
 export default function RepDetail(props) {
 
   console.log(props)
-      if (props.selectedReps.length === 0) {
+      if (props.selectedReps.length == 0) {
         return <h2>Click a representative to see their information!</h2>
     } else {
         return (
@@ -31,7 +31,7 @@ export default function RepDetail(props) {
                     <br />
                     <a href={props.selectedReps.urls}>Website</a>
                 </Item.Description>
-                {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} /> : 'E-mail unavailable.'}
+                {props.selectedReps.emails ? <MailForm emails={props.selectedReps.emails} handleEmailInput={props.handleEmailInput} handleEmailSubmit={props.handleEmailSubmit} emailBody={props.emailBody} /> : 'E-mail unavailable.'}
                     <Item.Extra>
                     {props.selectedReps.channels ? props.selectedReps.channels.map((channel, index) => <RepLinks key={index} type={channel.type} id={channel.id} />) : "No social media links available."}
                   </Item.Extra>

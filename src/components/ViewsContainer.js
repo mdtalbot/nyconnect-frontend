@@ -55,7 +55,7 @@ export default class ViewsContainer extends React.Component {
 
   mapSelectedReps = () => {
     return this.state.selectedReps.map((s) => {
-      return <RepDetail selectedReps={s} />
+      return <RepDetail selectedReps={s} handleEmailInput={this.handleEmailInput} handleEmailSubmit={this.handleEmailSubmit}/>
     })
   }
 
@@ -67,13 +67,18 @@ export default class ViewsContainer extends React.Component {
 
   handleEmailSubmit = (event) => {
     event.preventDefault()
-    fetch(`http://localhost:4000`, {
+    fetch(`http://localhost:4000/rep_mail`, {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json'
       },
-      body: JSON.stringify()
+      body: JSON.stringify({
+        address: this.state.repEmail,
+        message: this.state.emailBody
+      }
+      )
     })
+    .then(res => res.json())
   }
 
   render() {
@@ -81,7 +86,7 @@ export default class ViewsContainer extends React.Component {
 
     return (
       <div>
-        <Header size='small'><AddressSearch userAddress={this.state.userAddress} handleSearchChange={this.handleSearchChange} handleSearchSubmit={this.handleSearchSubmit} />
+        <Header size='small'><AddressSearch userAddress={this.state.userAddress} handleSearchChange={this.handleSearchChange} handleSearchSubmit={this.handleSearchSubmit} emailBody={this.state.emailBody} />
         </Header>
 
         <Grid divided="vertically" className="rep-detail-view" >
