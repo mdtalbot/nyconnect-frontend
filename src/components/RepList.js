@@ -10,7 +10,7 @@ export default function RepList(props) {
     )
   } else {
     return (
-      <List selection verticalAlign='middle'>
+      <List selection verticalAlign='middle' size='big'>
         {props.representatives.offices.map((rep, index) => <RepListItem key={index} name={rep.name} value={rep.officialIndices} handleRepClick={props.handleRepClick}/>
         )}
       </List>

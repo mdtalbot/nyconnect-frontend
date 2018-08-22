@@ -39,10 +39,11 @@
 .rep-list-view {
   position: fixed;
   text-align: left;
-  height: 565px;
+  height: 100vh;
   overflow: auto;
   width: 100%;
-  padding: 1em
+  /* padding: 1em */
+  margin-left: 2em
 }
 
 .rep-detail-view {
@@ -52,8 +53,8 @@
 }
 
 .welcome-content {
-  padding: 2em;
-  margin: 8em;
+  margin: 12em;
+
 }
 
 .registration {
@@ -79,7 +80,7 @@
 }
 
 .search-bar {
-    margin-left: 14em;
+  margin-left: 20em;
 }
 
 .views-container {

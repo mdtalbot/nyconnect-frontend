@@ -1,6 +1,5 @@
 import React from 'react';
 import { List } from 'semantic-ui-react'
-
 export default function RepListItem(props) {
   let formattedName = props.name.replace(/ /g, "_");
 

@@ -11,7 +11,7 @@ export default function RepDetail(props) {
         return <h2>Click a representative to see their information!</h2>
     } else {
         return (
-          <div className='rep-detail-view'>
+          <div className='rep-detail-view ui big'>
             <Item.Group relaxed>
               <Item>
               <Item.Image height="auto" width="auto" max-height="250" max-width="250" src={props.selectedReps.photoUrl ? props.selectedReps.photoUrl : require('../assets/unavailable.jpg')} />
