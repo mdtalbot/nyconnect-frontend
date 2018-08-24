@@ -1,7 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Welcome
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Welcome to PolitiConnect! This is an application that I created as my final project at the Flairon School in August of 2018, and it's intended to help users get easier access to their representatives in the government. 
+
+## Motivation
+
+Far too often, people are unaware who their representatives are at the state and local level. This is especially true in places like my hometown of New York, where we have so many elected officials that it's difficult to keep track of them all. I wanted to make a tool to help people get and stay engaged with politics by keeping them aware of upcoming elections, informing them who their elected representatives are and what said officials are doing, and allowing them to contact their representatives directly.
+
+## Code Style
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 
 ## Table of Contents
 
