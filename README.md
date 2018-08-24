@@ -10,6 +10,10 @@ Far too often, people are unaware who their representatives are at the state and
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
+## Libraries & Frameworks Used
+
+* Ruby on Rails
+
 
 ## Table of Contents
 
