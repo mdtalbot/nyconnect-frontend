@@ -12,7 +12,13 @@ Far too often, people are unaware who their representatives are at the state and
 
 ## Libraries & Frameworks Used
 
-* Ruby on Rails
+* Ruby on Rails(https://rubyonrails.org/)
+* React(https://reactjs.org/)
+* React Router(https://github.com/ReactTraining/react-router)
+* Semantic UI(https://react.semantic-ui.com/)
+* JSON Web Tokens(https://jwt.io/)
+
+All data was obtained through Google's Civic Information API(https://developers.google.com/civic-information/).
 
 
 ## Table of Contents
