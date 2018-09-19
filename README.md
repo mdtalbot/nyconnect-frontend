@@ -1,6 +1,6 @@
 ## Welcome
 
-Welcome to PolitiConnect! This is an application that I created as my final project at the Flairon School in August of 2018, and it's intended to help users get easier access to their representatives in the government. 
+Welcome to PolitiConnect! This is an application that I created as my final project at the Flatiron School in August of 2018, and it's intended to help users get easier access to their representatives in the government. 
 
 ## Motivation
 
