@@ -49,7 +49,7 @@ Install project dependencies:
 $ npm install
 ```
 
-*Make sure to also clone, install, and run the back end, found at http://www.github.com/mdtalbot/politiconnect-backend*. Installation instructions for the back end are found in that repository's README.
+*Make sure to also clone, install, and run the back end, found at http://www.github.com/mdtalbot/politiconnect-backend, before you start the app*. Installation instructions for the back end are found in that repository's README.
 
 Start the app:
 
