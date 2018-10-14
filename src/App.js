@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     const AuthedRegistrationForm = withAuth(RegistrationForm, "/");
-    const AuthedLoginForm = withAuth(LoginForm, "/my-snacks");
+    const AuthedLoginForm = withAuth(LoginForm, "/login");
     return (
       <div className="App">
         <NavBar />
