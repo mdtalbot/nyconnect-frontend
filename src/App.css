@@ -55,3 +55,8 @@
 .views-container {
   height: 83.5vh
 }
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
