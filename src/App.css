@@ -2,7 +2,7 @@ body {
   background-image: url('../src/assets/faded-american-flag-background-10.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover
+  background-size: cover;
 }
 
 .rep-list-view {
