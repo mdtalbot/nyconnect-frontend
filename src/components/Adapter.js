@@ -12,7 +12,7 @@ class Adapter {
   }
 
   static login(username, password) {
-    return fetch(`http://localhost:4000/sessions/`, {
+    return fetch(`http://politiconnect.heroku.com:3000/sessions/`, {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json'

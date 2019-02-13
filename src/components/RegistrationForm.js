@@ -20,7 +20,7 @@ export default class RegistrationForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:4000/users/`, {
+    fetch(`http://politiconnect.herokuapp.com:3000/users/`, {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json'

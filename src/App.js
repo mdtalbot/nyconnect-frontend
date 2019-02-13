@@ -9,6 +9,7 @@ import ViewsContainer from './components/ViewsContainer'
 import NavBar from './components/NavBar'
 import withAuth from './components/withAuth';
 import ElectionPage from './components/ElectionPage'
+import 'semantic-ui-css/semantic.min.css';
 
 
 // const { google } = require('googleapis');
@@ -29,7 +30,6 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-
 
         <Route exact path="/" component={Welcome} />
         <Route exact path="/register" component={(props) => <AuthedRegistrationForm {...props} />} />
