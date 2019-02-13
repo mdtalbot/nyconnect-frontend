@@ -74,7 +74,7 @@ export default class ViewsContainer extends React.Component {
   handleEmailSubmit = (event) => {
     event.preventDefault()
 
-    fetch(`http://politiconnect.herokuapp.com:3000/rep_mail`, {
+    fetch(`http://politiconnect-backend.herokuapp.com:3000/rep_mail`, {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json'
