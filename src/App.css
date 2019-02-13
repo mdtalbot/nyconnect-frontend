@@ -1,5 +1,5 @@
 #wrapper {
-  background-image: url("https://github.io/mdtalbot/politiconnect-frontend/src/assets/faded-american-flag-background-10.jpg");
+  background-image: url('../src/assets/faded-american-flag-background-10.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover
